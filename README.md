@@ -2,7 +2,13 @@
 
 Module 21 Assignment
 
-## Server Dependencies installed
-    * npm install (NOTE: in server directory )
-    * npm i apollo-server-express graphql (NOTE: also in the server directory)
+## Server Dependencies installed (All in server)
+    
+    * npm install
+    * npm i apollo-server-express graphql
+    * npm install jsonwebtoken
+    * npm i express-jwt
+
+
     * npm run watch
+    * http://localhost:3001/graphql
