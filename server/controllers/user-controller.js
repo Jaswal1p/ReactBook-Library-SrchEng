@@ -14,5 +14,36 @@ module.exports = {
         }
 
         res.json(foundUser);
-    }, 
+    },
+    
+    // create a user, sign a token and send it back to client/src/components/SignUpForm.js
+    async createUser({ body }, res) {
+        const user = await User.create(body);
+
+        if (!user) {
+            return res.status(400).json({ message: 'Oops! Something is wrong!' });
+        }
+        const token = signToken(user);
+        res.json({ token, user });
+    },
+
+    // user login, token generation and send it to (to client/src/components/LoginForm.js)
+    // destructure {body}
+    async login({ body }, res) {
+        const user = await User.findOne({ $or: [{ username: body.username }, { email: body.email }] });
+        if (!user) {
+            return res.status(400).json({ message: "Can't find this user" });
+        }
+
+        const correctPw = await user.isCorrectPassword(body.password);
+
+        if (!correctPw) {
+            return res.status(400).json({ message: 'Wrong password!' });
+        }
+        const token = signToken(user);
+        res.json({ token, user });
+    },
+
+    
+
 }
