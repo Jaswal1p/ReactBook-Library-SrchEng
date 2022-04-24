@@ -24,4 +24,8 @@ Module 21 Assignment
      ( immediately after that install concurrently by typing following on command line & press enter)
 
     * npm install -D concurrently
+
+## To start app in development environment
+
+    * npm run develop
      
