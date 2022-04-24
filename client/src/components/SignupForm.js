@@ -10,6 +10,7 @@ import { useMutation } from '@apollo/react-hooks';
 
 const SignupForm = () => {
   // set add user
+  // eslint-disable-next-line
   const [addUser, { error }] = useMutation(ADD_USER);
   // set initial form state
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });

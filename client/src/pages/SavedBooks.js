@@ -24,6 +24,7 @@ const SavedBooks = () => {
     }
 
     try {
+        // eslint-disable-next-line
         const { data } = await removeBook({
             variables: { bookId }
         });

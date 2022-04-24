@@ -69,6 +69,7 @@ const SearchBooks = () => {
     }
 
     try {
+        // eslint-disable-next-line
         const {data} = await saveBook({
             variables: {input: bookToSave}
         });
