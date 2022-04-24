@@ -8,7 +8,7 @@ import { ADD_USER } from '../utils/mutations';
 // import { createUser } from '../utils/API';
 import { useMutation } from '@apollo/react-hooks';
 
-function SignupForm() {
+const SignupForm = () => {
   // set add user
   const [addUser, { error }] = useMutation(ADD_USER);
   // set initial form state
