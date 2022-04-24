@@ -36,6 +36,10 @@ input bookInput {
 
 type Query {
     me: User
+    users: [User]
+    user(username: String!): User
+    books(username: String): [Book]
+    book(_id: ID!): Book
 }
 
 
@@ -58,3 +62,8 @@ type Mutation {
 
 // export the typeDefs
 module.exports = typeDefs;
+
+
+
+
+//added lines 39 to 42

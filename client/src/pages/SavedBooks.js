@@ -10,11 +10,13 @@ import { REMOVE_BOOK } from '../utils/mutations';
 import { GET_USER } from '../utils/queries';
 
 const SavedBooks = () => {
-  const [removeBook, { error }] = useMutation({REMOVE_BOOK});
+  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
 
   // use this to determine if `useEffect()` hook needs to run again
   const {loading, data } = useQuery(GET_USER);
+  
   const userData = data?.me || {};
+  console.log(userData)
 
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -134,3 +136,11 @@ if (loading) {
 };
 
 export default SavedBooks;
+
+
+
+
+
+
+
+//added console.log(at line 19)

@@ -9,8 +9,10 @@ const resolvers = {
         if(context.user) {
             const userData = await User.findOne({ _id: context.user._id })
                 .select('-__v -password')
+                .populate('books')
 
             return userData;
+            
         }
 
         throw new AuthenticationError('Not logged in');
@@ -74,3 +76,9 @@ const resolvers = {
 };
   
 module.exports = resolvers;
+
+
+
+
+
+// added  .populate('books') at line 12

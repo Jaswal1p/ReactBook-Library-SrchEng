@@ -25,6 +25,8 @@ Module 21 Assignment
 
     * npm install -D concurrently
 
+    * npm install jwt-decode
+
 ## To start app in development environment
 
     * npm run develop
