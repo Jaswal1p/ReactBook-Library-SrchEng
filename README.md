@@ -37,15 +37,29 @@ https://reactbook-library-srcheng.herokuapp.com/
 
 
 # Screenshots
+  Landing page
 
  ![LandingPage](https://user-images.githubusercontent.com/92233527/165023901-01994b5c-1c8a-4dce-9ae6-5a1b2975cab7.png) 
 
+ Modal with toggle for signin & signup
 
  ![ModalSignUp SignIn](https://user-images.githubusercontent.com/92233527/165023956-e76734c4-da99-4e5a-a2bf-85c8c76e23e4.png)
 
+Book search without signin or signup
+
  ![BookSearhDisplay](https://user-images.githubusercontent.com/92233527/165024010-9c83a37d-c079-4f8d-b34f-9da842f9ba67.png)
 
+successful display books after successful login & there is option to save
 
+![SrchResultAftSignIn](https://user-images.githubusercontent.com/92233527/165025812-65988a1e-d24d-411c-addb-f848ecb3f0dc.png)
+
+Successful display of book saved
+
+![SuccessSavingTheBook](https://user-images.githubusercontent.com/92233527/165025881-10cb92d1-6ae1-4b8b-add0-ab033bd5b7bf.png)
+
+Succesful saving in local storage
+
+![SuccSavingBkTokenInLocalStor](https://user-images.githubusercontent.com/92233527/165025903-99299dd5-f1e5-4c49-bb72-65a5c1610446.png)
 
 # Installation
   
