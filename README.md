@@ -38,10 +38,12 @@ https://reactbook-library-srcheng.herokuapp.com/
 
 # Screenshots
 
- Initial deployment using local host, which shows page directly landing at 'about me' section, which is highlighted.
+ ![LandingPage](https://user-images.githubusercontent.com/92233527/165023901-01994b5c-1c8a-4dce-9ae6-5a1b2975cab7.png) 
 
-![DeployLocalHost](https://user-images.githubusercontent.com/92233527/163704632-46b74e43-a83d-4d46-8f82-a3e05a806cbc.png)
 
+ ![ModalSignUp SignIn](https://user-images.githubusercontent.com/92233527/165023956-e76734c4-da99-4e5a-a2bf-85c8c76e23e4.png)
+
+ ![BookSearhDisplay](https://user-images.githubusercontent.com/92233527/165024010-9c83a37d-c079-4f8d-b34f-9da842f9ba67.png)
 
 
 
@@ -54,12 +56,17 @@ https://reactbook-library-srcheng.herokuapp.com/
   4. React-dom
   5. React-router-dom
   6. react-scripts
-  7. react-vitals
+  7. GraphQL
+  8. Apollo Server
+  9. concurrently
+  10. jsonwebtoken
+  11. jwt-decode
+  12. nodemon
   
 
 # Usage
 
- This is a front end application built with react. This is my personal portfolio, which I plan to keep improving in future.
+ This is a front end as well back end application built with GraphQL, Apollo Server & react. 
 
  # License 
  > This project is licensed under the MIT license.
