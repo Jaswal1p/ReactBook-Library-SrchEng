@@ -4,7 +4,7 @@
   "description": "Module 21 Assignment",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/Jaswal1p/ReactBook-Library-SrchEng/issues"
   },
-  "homepage": "https://github.com/Jaswal1p/ReactBook-Library-SrchEng#readme"
+  "homepage": "https://github.com/Jaswal1p/ReactBook-Library-SrchEng#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1"
+  }
 }
