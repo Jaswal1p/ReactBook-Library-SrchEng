@@ -40,8 +40,8 @@ export const LOGIN_USER = gql`
                         authors
                         link
                         image
-             }
-           }
+                    }
+                }
         }
     }
 

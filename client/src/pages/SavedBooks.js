@@ -19,7 +19,7 @@ const SavedBooks = () => {
   // use this to determine if `useEffect()` hook needs to run again
   const { loading, data } = useQuery(GET_USER);
   console.log(loading, data)
-  const userData = data?.me || {};
+  const userData = data?.GET_USER || {};
   console.log(userData)
 
   const handleDeleteBook = async (bookId) => {
