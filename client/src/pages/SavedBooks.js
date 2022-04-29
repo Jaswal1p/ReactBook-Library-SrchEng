@@ -5,15 +5,19 @@ import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap
 
 // import { getMe, deleteBook } from '../utils/API';
 import { removeBookId } from '../utils/localStorage';
-import { useQuery, useMutation } from '@apollo/react-hooks';
-import { REMOVE_BOOK } from '../utils/mutations';
+
 import { GET_USER } from '../utils/queries';
+
+import { useQuery, useMutation } from '@apollo/react-hooks';
+
+import { REMOVE_BOOK } from '../utils/mutations';
+
 
 const SavedBooks = () => {
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);
 
   // use this to determine if `useEffect()` hook needs to run again
-  const {loading, data } = useQuery(GET_USER);
+  const { loading, data } = useQuery(GET_USER);
   console.log(loading, data)
   const userData = data?.me || {};
   console.log(userData)
@@ -109,9 +113,9 @@ if (loading) {
       </Jumbotron>
       <Container>
         <h2>
-          {userData.savedBooks?.length
+          {userData.savedBooks?.length          
             ? `Viewing ${userData.savedBooks?.length} saved ${userData.savedBooks?.length === 1 ? 'book' : 'books'}:`
-            : 'You have no saved books!'}
+            : 'You have not saved any books!'}
         </h2>
         <CardColumns>
           {userData.savedBooks?.map((book) => {

@@ -35,13 +35,14 @@ const resolvers = {
         const user = await User.findOne({ email });
 
         if (!user) {
-            throw new AuthenticationError('Incorrect credentials');
+            throw new AuthenticationError('No No No!! Incorrect username/password');
+
         }
 
         const correctPw = await user.isCorrectPassword(password);
 
         if (!correctPw) {
-            throw new AuthenticationError('Incorrect credentials');
+            throw new AuthenticationError('Your password/username combo is wrong!');
         }
 
         const token = signToken(user);
@@ -50,28 +51,32 @@ const resolvers = {
       
       
       saveBook: async (parent, { input }, context) => {
+
         if (context.user) {
-            const updatedUser = await User.findByIdAndUpdate(
-                { _id: context.user._id },
-                { $addToSet: { savedBooks: input } },
-                { new: true }
-            );
-            return updatedUser;
+              const updatedUser = await User.findByIdAndUpdate(
+                  { _id: context.user._id },
+                  { $addToSet: { savedBooks: input } },
+                  { new: true }
+              );
+              return updatedUser;
+              
         }
         // throw new AuthenticationError('You need to be logged in!')
       },
       
 
       removeBook: async (parent, args, context) => {
-        if (context.user) {
-            const updatedUser = await User.findOneAndUpdate(
-                { _id: context.user._id },
-                { $pull: { savedBooks: { bookId: args.bookId } } },
-                { new: true }
-            );
-            return updatedUser;
-        }
-        // throw new AuthenticationError('You need to be logged in!')
+          if (context.user) {
+              const updatedUser = await User.findOneAndUpdate(
+
+                  { _id: context.user._id },
+                  { $pull: { savedBooks: { bookId: args.bookId } } },
+                  { new: true }
+
+              );
+              return updatedUser;
+          }
+          // throw new AuthenticationError('You need to be logged in!')
       }
 
 
@@ -80,7 +85,7 @@ const resolvers = {
 
 };
   
-module.exports = resolvers;
+module.exports = resolvers; 
 
 
 
