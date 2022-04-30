@@ -1,7 +1,7 @@
 import React from 'react';
 import { ApolloProvider } from '@apollo/react-hooks';
 // import { ApolloProvider } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
+//  import { setContext } from '@apollo/client/link/context';
 import  ApolloClient  from 'apollo-boost';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -11,6 +11,8 @@ import SavedBooks from './pages/SavedBooks';
 
 
 const client = new ApolloClient({
+  
+
   request: operation => {
     const token = localStorage.getItem('id_token');
 
@@ -24,6 +26,16 @@ const client = new ApolloClient({
   uri: '/graphql'
 
 });
+
+// const authLink = setContext((_, { headers }) => {
+//   const token = localStorage.getItem('id_token');
+//   return {
+//     headers: {
+//       ...headers,
+//       authorization: token ? `Bearer ${token}` : '',
+//     },
+//   };
+// });
 
 function App() {
   return (
