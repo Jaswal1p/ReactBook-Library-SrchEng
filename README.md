@@ -61,6 +61,16 @@ Succesful saving in local storage
 
 ![SuccSavingBkTokenInLocalStor](https://user-images.githubusercontent.com/92233527/165025903-99299dd5-f1e5-4c49-bb72-65a5c1610446.png)
 
+Successful saving in heroku deployed app with display of books in '/saved' webpage
+
+![SuccessSave DispIyHerokuApp](https://user-images.githubusercontent.com/92233527/166092029-ba629523-419a-4796-bc5a-b02a5fabe208.png)
+
+Saved book shows button for deleting the saved book
+
+![SavdBookShowDeleteButton](https://user-images.githubusercontent.com/92233527/166092116-78a7ffb0-f4af-4019-8225-6148bbf363a5.png)
+
+
+
 # Installation
   
   The following must be installed to run this application. 
